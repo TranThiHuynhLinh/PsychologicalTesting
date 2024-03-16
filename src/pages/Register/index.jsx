@@ -1,7 +1,7 @@
-import styles from "./Login.module.scss"
+import styles from "./Register.module.scss"
 import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight, faFileCircleQuestion, faHeartCircleCheck, faUserGroup } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRight, faHeartCircleCheck, faUserGroup, faFileCircleQuestion } from "@fortawesome/free-solid-svg-icons"
 import { Link } from "react-router-dom"
 import routesConfig from "~/config/routes"
 import { toast } from 'react-toastify'
@@ -9,15 +9,21 @@ import { useState } from "react"
 
 const cx = classNames.bind(styles)
 
-function Login() {
+function Register() {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const handleLogin = () => {
-        if (username.length === 0 | password.length === 0) {
+    const [confirmPassword, setConfirmPassword] = useState('')
+    const handleRegister = () => {
+        if (username.length === 0 | password.length === 0 | confirmPassword.length === 0) {
             toast('Nhập thiếu thông tin!')
             return
         }
-        toast('Đăng nhập thành công!')
+        if (password !== confirmPassword) {
+            toast('Nhập sai mật khẩu!')
+        }
+        else if (password === confirmPassword) {
+            toast('Đăng ký thành công!')
+        }
     }
     return (
         <div className={cx('wrapper')}>
@@ -47,7 +53,7 @@ function Login() {
                         <div className={cx('logo-name')}>Depression<br />Testing</div>
                     </div>
                     <div className={cx('login-title')}>
-                        Đăng nhập
+                        Đăng ký
                     </div>
                     <div className={cx('login-quote')}>
                         Chào cậu! Tớ luôn ở đây để lắng nghe và đồng hành cùng cậu. Hãy cho tớ biết những vấn đề của cậu nhé.
@@ -68,11 +74,19 @@ function Login() {
                                 value={password} onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        <button className={cx('button')} onClick={handleLogin}>Đăng nhập</button>
+                        <div className={cx('input-form')}>
+                            <div className={cx('input-title')}>Xác nhận mật khẩu</div>
+                            <input
+                                type="password" className={cx('input')}
+                                placeholder="Xác nhận mật khẩu..."
+                                value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}
+                            />
+                        </div>
+                        <button className={cx('button')} onClick={handleRegister}>Đăng ký</button>
                     </div>
                     <div className={cx('register')}>
-                        <Link className={cx('link')} to={routesConfig.register}>
-                            Chưa có tài khoản? Đăng ký
+                        <Link className={cx('link')} to={routesConfig.login}>
+                            Đã có tài khoản? Đăng nhập
                         </Link>
                         <FontAwesomeIcon icon={faArrowRight} className={cx('register-icon')} />
                     </div>
@@ -85,4 +99,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Register

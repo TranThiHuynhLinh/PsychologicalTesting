@@ -17,12 +17,28 @@ body {
     text-rendering: optimizeSpeed;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+.myCustomToast {
+    color: var(--black) !important;
+    font-weight: 500;
+}
+
 // COLOR
 :root {
     --primary: #a479e0;
     --primary-1: #6f45aa;
+    --primary-2: #b721ff;
     --white: #f6f1fc;
     --white-1: #f6f1fc;
     --white-2: #f2e9ff;
+    --grey: #808080;
+    --grey-1: #dad6d694;
+    --grey-2: #d7d7d9;
     --black: #211433;
+    --black-1: #211433c6;
+    --blue: #21d4fd;
 }
