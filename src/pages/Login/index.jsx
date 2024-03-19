@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import routesConfig from "~/config/routes"
 import { toast } from 'react-toastify'
 import { useState } from "react"
+import * as user from "~/api/user"
 
 const cx = classNames.bind(styles)
 
@@ -17,7 +18,15 @@ function Login() {
             toast('Nhập thiếu thông tin!')
             return
         }
-        toast('Đăng nhập thành công!')
+        if (user.login(username, password)) {
+            toast('Đăng nhập thành công!')
+        }
+        else {
+            toast('Sai tài khoản hoặc mật khẩu!')
+        }
+    }
+    const handleKeyPress = (e) => {
+        if (e.keyCode === 13) handleLogin()
     }
     return (
         <div className={cx('wrapper')}>
@@ -65,6 +74,7 @@ function Login() {
                             <input
                                 type="password" className={cx('input')}
                                 placeholder="Mật khẩu..."
+                                onKeyDown={(e) => handleKeyPress(e)}
                                 value={password} onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>

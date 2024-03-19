@@ -2,28 +2,35 @@ import styles from "./Register.module.scss"
 import classNames from 'classnames/bind'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight, faHeartCircleCheck, faUserGroup, faFileCircleQuestion } from "@fortawesome/free-solid-svg-icons"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import routesConfig from "~/config/routes"
 import { toast } from 'react-toastify'
 import { useState } from "react"
+import * as user from "~/api/user"
 
 const cx = classNames.bind(styles)
 
 function Register() {
+    const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
+    const [userType, setUserType] = useState('Customer')
     const handleRegister = () => {
-        if (username.length === 0 | password.length === 0 | confirmPassword.length === 0) {
+        if (!username || !password || !confirmPassword) {
             toast('Nhập thiếu thông tin!')
             return
         }
         if (password !== confirmPassword) {
             toast('Nhập sai mật khẩu!')
+            return
         }
-        else if (password === confirmPassword) {
+        const role = userType === 'Counselor' ? 1 : 0
+        const registrationSuccess = user.register(username, password, role)
+        if (registrationSuccess) {
             toast('Đăng ký thành công!')
-        }
+            navigate('/')
+        } else toast('Đăng ký không thành công. Tài khoản có thể đã tồn tại.')
     }
     return (
         <div className={cx('wrapper')}>
@@ -55,9 +62,6 @@ function Register() {
                     <div className={cx('login-title')}>
                         Đăng ký
                     </div>
-                    <div className={cx('login-quote')}>
-                        Chào cậu! Tớ luôn ở đây để lắng nghe và đồng hành cùng cậu. Hãy cho tớ biết những vấn đề của cậu nhé.
-                    </div>
                     <div className={cx('login-form')}>
                         <div className={cx('input-form')}>
                             <div className={cx('input-title')}>Tên đăng nhập</div>
@@ -81,6 +85,17 @@ function Register() {
                                 placeholder="Xác nhận mật khẩu..."
                                 value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}
                             />
+                        </div>
+                        <div className={cx('input-form')}>
+                            <div className={cx('input-title')}>Loại tài khoản</div>
+                            <select
+                                className={cx('input')}
+                                value={userType}
+                                onChange={(e) => setUserType(e.target.value)}
+                            >
+                                <option value="Customer">Khách hàng</option>
+                                <option value="Counselor">Tư vấn viên</option>
+                            </select>
                         </div>
                         <button className={cx('button')} onClick={handleRegister}>Đăng ký</button>
                     </div>

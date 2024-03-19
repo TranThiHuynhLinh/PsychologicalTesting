@@ -12,17 +12,19 @@
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
         "classnames": "^2.5.1",
+        "fs": "^0.0.1-security",
         "module-alias": "^2.2.3",
+        "path": "^0.12.7",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.22.3",
         "react-scripts": "5.0.1",
-        "sass": "^1.72.0",
         "react-toastify": "^10.0.4",
+        "sass": "^1.72.0",
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "craco start",
+        "start": "set PORT=6977 && craco start",
         "build": "craco build",
         "test": "craco test",
         "eject": "craco eject"

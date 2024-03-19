@@ -3,8 +3,13 @@ import { publicRoutes } from "./routes"
 import { DefaultLayout } from "~/components/Layouts"
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import * as data from "~/api/data"
+import { useEffect } from "react"
 
 function App() {
+    useEffect(() => {
+        data.storeDataFromDb()
+    }, [])
     return (
         <Router>
             <div className="App">

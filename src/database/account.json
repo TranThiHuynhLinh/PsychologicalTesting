@@ -1,0 +1,24 @@
+{
+    "counselors": [
+        {
+            "username": "thuong123",
+            "password": "123456",
+            "role": 1
+        }
+    ],
+    "clients": [
+        {
+            "username": "linhlinh123",
+            "password": "123456",
+            "role": 0,
+            "sex": "",
+            "age": "",
+            "std_year": "",
+            "family_status": "",
+            "family_eco": "",
+            "address": "",
+            "latest_gpa": "",
+            "is_chronic": ""
+        }
+    ]
+}
