@@ -7,10 +7,12 @@ import routesConfig from "~/config/routes"
 import { toast } from 'react-toastify'
 import { useState } from "react"
 import * as user from "~/api/user"
+import { useNavigate } from "react-router-dom"
 
 const cx = classNames.bind(styles)
 
 function Login() {
+    const navigate = useNavigate()
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const handleLogin = () => {
@@ -20,6 +22,7 @@ function Login() {
         }
         if (user.login(username, password)) {
             toast('Đăng nhập thành công!')
+            navigate(routesConfig.getInfo)
         }
         else {
             toast('Sai tài khoản hoặc mật khẩu!')
