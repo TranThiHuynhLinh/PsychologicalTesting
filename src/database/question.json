@@ -1,0 +1,53 @@
+{
+    "question": [
+        {
+            "content": "Ít quan tâm hoặc ít muốn làm các việc?"
+        },
+        {
+            "content": "Cảm thấy buồn chán, trầm cảm, cáu giận hoặc tuyệt vọng."
+        },
+        {
+            "content": "Khó ngủ, khó ngủ ngon, hoặc ngủ quá nhiều."
+        },
+        {
+            "content": "Cảm thấy mệt mỏi, hoặc ít sinh lực?"
+        },
+        {
+            "content": "Chán ăn, giảm cân hoặc ăn quá nhiều."
+        },
+        {
+            "content": "Cảm thấy chán ghét bản thân – hoặc cảm thấy bạn là kẻ thất bại, hoặc cảm giác bạn để bản thân hoặc gia đình thất vọng."
+        },
+        {
+            "content": "Khó tập trung,  chú ý vào những việc như bài vở, đọc, hoặc xem TV."
+        },
+        {
+            "content": "Di chuyển hoặc nói chậm đến mức những người khác có thể nhận thấy? Hoặc ngược lại – vận động quá mức hoặc ngồi không yên tới mức bạn di chuyển đi lại nhiều hơn bình thường?"
+        },
+        {
+            "content": "Nghĩ rằng tốt nhất là bạn nên chết đi, hoặc gây tổn hại cho bản thân theo cách nào đó."
+        }
+    ],
+    "result": [
+        {
+            "name": "Bình thường",
+            "content": "Chúc mừng bạn vì không có dầu hiệu trầm cảm. Thật vui khi biết rằng bạn đang có một cuộc sống hạnh phúc, nhưng một lúc nào đó bạn muốn tìm một ai đó để lắng nghe thì hãy nhớ chúng mình luôn ở đây nhé!"
+        },
+        {
+            "name": "Mức trầm cảm tối thiểu",
+            "content": "Có vẻ như bạn đang có một chút băn khoăn, lo lắng nhỉ? Chúng mình có thể giúp gì cho bạn không?"
+        },
+        {
+            "name": "Trầm cảm nhẹ",
+            "content": "Dạo này bạn có đang muộn phiền gì không nhỉ? Chúng mình nhận thấy bạn có một chút dấu hiệu của trầm cảm. Hãy để chúng mình giúp bạn nhé!"
+        },
+        {
+            "name": "Trầm cảm trung bình",
+            "content": "Bạn có đang ổn không? Chúng mình cảm nhận được bạn đang trải qua khoảng thời gian khá tệ. Hãy để chúng mình giúp bạn nhé!"
+        },
+        {
+            "name": "Trầm cảm nặng",
+            "content": "Có vẻ như những gì bạn đang trải qua không được tốt lắm nhỉ? Hãy để chúng mình được biết về những điều đó và bên cạnh bạn lúc này được không?"
+        }
+    ]
+}

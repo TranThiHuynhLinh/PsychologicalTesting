@@ -17,15 +17,21 @@ function Login() {
     const [password, setPassword] = useState('')
     const handleLogin = () => {
         if (username.length === 0 | password.length === 0) {
-            toast('Nhập thiếu thông tin!')
+            toast.error('Nhập thiếu thông tin!')
             return
         }
         if (user.login(username, password)) {
-            toast('Đăng nhập thành công!')
-            navigate(routesConfig.getInfo)
+            toast.success('Đăng nhập thành công!')
+            const isComplete = user.isUserInfoComplete(username)
+
+            if (isComplete) {
+                navigate(routesConfig.measure)
+            } else {
+                navigate(routesConfig.getInfo)
+            }
         }
         else {
-            toast('Sai tài khoản hoặc mật khẩu!')
+            toast.error('Sai tài khoản hoặc mật khẩu!')
         }
     }
     const handleKeyPress = (e) => {

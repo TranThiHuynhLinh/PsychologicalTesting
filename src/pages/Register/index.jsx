@@ -18,19 +18,19 @@ function Register() {
     const [userType, setUserType] = useState('Customer')
     const handleRegister = () => {
         if (!username || !password || !confirmPassword) {
-            toast('Nhập thiếu thông tin!')
+            toast.error('Nhập thiếu thông tin!')
             return
         }
         if (password !== confirmPassword) {
-            toast('Nhập sai mật khẩu!')
+            toast.error('Nhập sai mật khẩu!')
             return
         }
         const role = userType === 'Counselor' ? 1 : 0
         const registrationSuccess = user.register(username, password, role)
         if (registrationSuccess) {
-            toast('Đăng ký thành công!')
+            toast.success('Đăng ký thành công!')
             navigate('/')
-        } else toast('Đăng ký không thành công. Tài khoản có thể đã tồn tại.')
+        } else toast.error('Đăng ký không thành công. Tài khoản có thể đã tồn tại.')
     }
     return (
         <div className={cx('wrapper')}>

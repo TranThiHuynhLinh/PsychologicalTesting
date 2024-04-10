@@ -3,6 +3,7 @@ const routes = {
     register: '/register',
     getInfo: '/get-info',
     measure: '/measure',
+    result: '/result',
 }
 
 export default routes

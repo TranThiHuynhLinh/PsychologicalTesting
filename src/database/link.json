@@ -1,0 +1,75 @@
+{
+    "center": [
+        {
+            "location": "Bệnh viên tâm thần Đà Nẵng",
+            "address": "193 Nguyễn Lương Bằng, P. Hòa Khánh Bắc, Q. Liên Chiểu, Đà Nẵng",
+            "hotline": "0236.3.842.326"
+        },
+        {
+            "location": "Phòng khám chuyên khoa Tâm lý - Tâm thần - Bệnh viện 199",
+            "address": "216 Nguyễn Công Trứ, Q. Sơn Trà, Đà Nẵng",
+            "hotline": "02363 986 881"
+        },
+        {
+            "location": "Phòng khám chuyên khoa Tâm Thần kinh",
+            "address": "99 Hùng Vương, Hải Châu 1, Hải Châu, Đà Nẵng",
+            "hotline": "0905 111 634"
+        },
+        {
+            "location": "Phòng khám tâm thần kinh Mental Clinic",
+            "address": "63 Phan Thanh, Thạc Gián, Thanh Khê, Đà Nẵng ",
+            "hotline": "0868 591 445"
+        }
+    ],
+    "doctor": [
+        {
+            "name": "Bác sĩ cao cấp Trần Văn Mau",
+            "address": "197 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng",
+            "hotline": "0913 785 495",
+            "info": "Phó Giám đốc Bệnh viện Tâm thần Đà Nẵng, với 30 năm kinh nghiệm trong công tác khám chữa bệnh cho bệnh nhân tâm thần tại TP Đà Nẵng và các tỉnh lân cận tại Miền Trung. Là người thầy thuốc luôn tận tâm với bệnh nhân, tận tuy với công việc, bác sĩ Trần Văn Mau được Chủ tịch nước khen tặng danh hiệu “Thầy thuốc ưu tú”.",
+            "specialize": "Bệnh lý tâm thần người lớn/trẻ em, trầm cảm, rối loạn lo âu, stress, các bệnh lý khác"
+        },
+        {
+            "name": "Bác sĩ CKII Tống Thị Luyến",
+            "address": "19 Đặng Tất, Hòa Khánh Nam, Liên Chiểu, Đà Nẵng",
+            "hotline": "0983 457 471",
+            "info": "Bác sĩ tại Bệnh viện Tâm thần Đà Nẵng.Với kinh nghiệm trên 20 năm trong ngành Tâm thần. Đặc biệt là lĩnh vực tâm thần Nhi.",
+            "specialize": "Stress, rối loạn lo âu, trầm cảm, các rối loạn tâm thần, động kinh. Đặc biệt, điều trị các rối loạn ở trẻ em. Thực hiện các trắc nghiệm tâm lý như: Chỉ số thông minh (IQ), Test trí nhớ, Test Lo âu, Trầm cảm,..."
+        },
+        {
+            "name": "Bác sĩ Phan Thị Phương Quỳnh",
+            "address": "253 Hoàng Diệu, Nam Dương, Hải Châu, Đà Nẵng",
+            "hotline": "02363 826 825",
+            "info": "Bác sĩ tại Bệnh Viện Tâm thần Đà Nẵng.",
+            "specialize": "Tư vấn khám và chữa, điều trị các bệnh về Tâm thần thông thường, Cấp cứu, khám bệnh, chữa bệnh ngoại trú tâm thần, động kinh. Thực hiện các liệu pháp tâm lý trị liệu."
+        },
+        {
+            "name": "Bác sĩ Trần Nguyên Ngọc",
+            "address": "K136/24 Hải Phòng, Thạch Thang, Hải Châu, Đà Nẵng",
+            "hotline": "0236 3886 306",
+            "info": "Phó Giám đốc Bệnh viện Tâm thần Đà Nẵng",
+            "specialize": ""
+        },
+        {
+            "name": "Bác sĩ Đỗ Văn Thanh Luân",
+            "address": "63 Phan Thanh, Thanh Khê, Đà Nẵng",
+            "hotline": "02363 656 082",
+            "info": "Trưởng khoa Cấp tính nữ, Bệnh viện Tâm thần Đà Nẵng",
+            "specialize": "Khám và điều trị các bất thường về tâm lý như tâm thần phân liệt, động kinh, rối loạn cảm xúc, loạn thần sau sinh,..."
+        },
+        {
+            "name": "ThS. Bác sĩ Đàm Văn Đức",
+            "address": "129 Phùng Hưng, Hòa Minh, Liên Chiểu, Đà Nẵng",
+            "hotline": "0943 493 235",
+            "info": "Bác sĩ tại Bệnh viện Tâm thần Đà Nẵng. Gần 10 năm kinh nghiệm khám, chẩn đoán và chữa trị các bệnh lý về Thần kinh - Tâm lý - Tâm thần.",
+            "specialize": "Khám và điều trị các vấn đề về Thần kinh, Tâm lý - Tâm thần"
+        },
+        {
+            "name": "Bác sĩ Lê Ngọc Dũng",
+            "address": "46 Phan Chu Trinh, Đà Nẵng",
+            "hotline": "0236 3821 740",
+            "info": "Bác sĩ tại Bệnh viện Đà Nẵng. Là người có kinh nghiệm lâu năm, bác sĩ du học tại Hoa Kỳ, Pháp nên trình độ chuyên môn nghiệp vụ được đánh giá rất cao.",
+            "specialize": "Chuyên tiếp nhận và điều trị các bệnh như: rối loạn cảm xúc, rối loạn TIC, rối loạn lo âu,..."
+        }
+    ]
+}

@@ -39,7 +39,7 @@ export const register = (username, password, role) => {
     initializeData()
     const newUser = {
         username, password, role, ...role === 0 && {
-            sex: "", age: "", std_year: "", family_status: "", family_eco: "",
+            sex: "", std_year: "", family_status: "", family_eco: "",
             address: "", latest_gpa: "", is_chronic: ""
         }
     }
@@ -81,25 +81,48 @@ export const getUserData = (username) => {
     const user = local_account.clients.find(user => user.username === username)
     if (user) {
         return {
-            age: user.age || '',
             sex: user.sex || '',
             std_year: user.std_year || '',
             family_status: user.family_status || '',
             family_eco: user.family_eco || '',
             address: user.address || '',
-            is_chronic: user.is_chronic || ''
+            is_chronic: user.is_chronic || '',
+            latest_gpa: user.latest_gpa || '',
         }
     } else {
         return {
-            age: '',
             sex: '',
             std_year: '',
             family_status: '',
             family_eco: '',
             address: '',
-            is_chronic: ''
+            is_chronic: '',
+            latest_gpa: ''
         }
     }
 }
+
+export const isUserInfoComplete = (username) => {
+    initializeData()
+    let userInfo
+
+    for (const userType in local_account) {
+        userInfo = local_account[userType].find(user => user.username === username)
+        if (userInfo) {
+            break
+        }
+    }
+
+    if (!userInfo) {
+        return false
+    }
+
+    const requiredFields = ['sex', 'std_year', 'family_status', 'family_eco', 'address', 'latest_gpa', 'is_chronic']
+
+    return requiredFields.every(field => {
+        return userInfo[field] !== undefined && userInfo[field] !== ''
+    })
+}
+
 
 
