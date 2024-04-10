@@ -54,11 +54,16 @@ function GetInfo() {
     }, [age, gender, yearOfStudy, maritalStatus, familyEconomicStatus, livingArrangements, healthStatus])
 
     const renderProgressLevelBar = (level) => {
+        let message = progressLevel < 7 ? `Bạn cần điền thêm ${7 - progressLevel} mục thông tin nữa!` : "Bạn đã điền đầy đủ thông tin cần thiết!";
+
         return (
-            <div className={cx('progress-bar')}>
-                {[...Array(7)].map((_, index) => (
-                    <div key={index} className={cx('progress-bar-segment', { filled: index < level })}></div>
-                ))}
+            <div className={cx('progress-wrapper')}>
+                <div className={cx("progress-message")}>{message}</div>
+                <div className={cx('progress-bar')}>
+                    {[...Array(7)].map((_, index) => (
+                        <div key={index} className={cx('progress-bar-segment', { filled: index < level })}></div>
+                    ))}
+                </div>
             </div>
         )
     }

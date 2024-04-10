@@ -1,0 +1,103 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    --col-wide: 600px;
+    --col-narrow: calc(var(--col-wide) / 4);
+}
+
+.zero {
+    background-color: #afd198;
+}
+.sometimes {
+    background-color: #e8efcf;
+}
+.haft {
+    background-color: #ecca9c;
+}
+.everyday {
+    background-color: #dba979;
+}
+
+.table-header {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 12px;
+    border-radius: 8px;
+
+    .header-title {
+        width: var(--col-wide);
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 4px 12px;
+    }
+
+    .header-ans {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+
+        .item {
+            width: var(--col-narrow);
+            margin-right: 8px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            border-radius: 6px;
+        }
+    }
+}
+
+.table-body {
+    margin-top: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid var(--grey-1);
+    border-radius: 8px;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+        border-bottom: 2px solid var(--grey-1);
+
+        .row-title {
+            width: var(--col-wide);
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 4px 24px;
+        }
+
+        .choose {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+
+            .button {
+                width: calc(var(--col-narrow) * 0.8);
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+}

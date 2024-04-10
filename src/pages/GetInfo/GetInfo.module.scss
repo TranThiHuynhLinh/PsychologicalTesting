@@ -107,21 +107,39 @@ form {
     }
 }
 
-.progress-bar {
+.progress-wrapper {
     display: flex;
-    flex-direction: row;
-    height: 20px;
-    margin-top: 40px;
-    width: 70%;
-}
+    flex-direction: column;
+    align-items: center;
+    margin-top: 16px;
+    width: 100%;
 
-.progress-bar-segment {
-    flex: 1;
-    margin: 2px;
-    border-radius: 16px;
-    background-color: rgba(255, 0, 0, 0.664);
-    height: 12px;
-    &.filled {
-        background-color: #4caf4fad;
+    .progress-message {
+        font-weight: 600;
+        font-size: 1.8rem;
+    }
+
+    .progress-bar {
+        display: flex;
+        flex-direction: row;
+        height: 20px;
+        margin-top: 40px;
+        width: 70%;
+
+        .progress-bar-segment {
+            flex: 1;
+            margin: 2px;
+            border-radius: 16px;
+            background-color: var(--grey);
+            height: 12px;
+            &.filled {
+                background-color: var(--blue);
+                background-image: linear-gradient(
+                    19deg,
+                    var(--blue) 0%,
+                    var(--primary-2) 100%
+                );
+            }
+        }
     }
 }
