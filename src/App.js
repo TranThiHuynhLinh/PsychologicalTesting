@@ -5,6 +5,7 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import * as data from "~/api/data"
 import { useEffect } from "react"
+import 'tippy.js/dist/tippy.css'
 
 function App() {
     useEffect(() => {

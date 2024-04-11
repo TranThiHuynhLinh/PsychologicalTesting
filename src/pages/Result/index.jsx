@@ -1,48 +1,14 @@
 import styles from './Result.module.scss'
 import classNames from 'classnames/bind'
 import { useEffect, useState } from 'react'
-import question from '~/database/question'
 import { toast } from 'react-toastify'
 import link from '~/database/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserDoctor } from '@fortawesome/free-solid-svg-icons'
-
+import Tippy from '@tippyjs/react'
 const cx = classNames.bind(styles)
 
 function Result() {
-    const totalScore = localStorage.getItem("totalScore")
-    const result = question['result']
-    const scoring = (totalScore) => {
-        if (totalScore < 5) {
-            return result[0]['content']
-        } else if (totalScore < 10) {
-            return result[1]['content']
-        } else if (totalScore < 15) {
-            return result[2]['content']
-        } else if (totalScore < 20) {
-            return result[3]['content']
-        } else {
-            return result[4]['content']
-        }
-    }
-    const content = scoring(totalScore)
-    useEffect(() => {
-        if (!isToastShowing) {
-            toast.success(`${content}`, {
-                onClose: () => setIsToastShowing(false)
-            });
-            setIsToastShowing(true)
-        }
-    }, [])
-    const [isToastShowing, setIsToastShowing] = useState(false)
-    const toggleResult = () => {
-        if (!isToastShowing) {
-            toast.success(`${content}`, {
-                onClose: () => setIsToastShowing(false)
-            });
-            setIsToastShowing(true);
-        }
-    }
     const spanGenerator = (text) => {
         return (
             <div className={cx('flip-animation')}>
@@ -62,7 +28,7 @@ function Result() {
         )
     }
     const renderCenters = () => link.center.map((center, index) => (
-        <div key={index} className={cx("center-item", "narrow")}>
+        <div key={index} className={cx("center-item", "wide")}>
             <div className={cx("center-item_link")}>
                 <div className={cx("center-item_bg")}></div>
                 <div className={cx("center-item_title")}>
@@ -85,24 +51,56 @@ function Result() {
     ))
     const renderDoctors = () => link.doctor.map((doctor, index) => (
         <div key={index} className={cx("center-item", 'wide')}>
-            <div className={cx("center-item_link")}>
-                <div className={cx("center-item_bg")}></div>
-                <div className={cx("center-item_title")}>
-                    {doctor.name}
-                    <FontAwesomeIcon icon={faUserDoctor} className={cx('icon')} />
+            <Tippy
+                content={
+                    <div className={cx('tippy-modal')}>
+                        {doctor.info && <div className={cx('info')}>{doctor.info}</div>}
+                        {doctor.specialize && <div className={cx('content')}>{doctor.specialize}</div>}
+                    </div>
+                }
+                position="bottom"
+                trigger="mouseenter"
+                hideOnClick={false}
+                animation="fade"
+            >
+                <div className={cx("center-item_link")}>
+                    <div className={cx("center-item_bg")}></div>
+                    <div className={cx("center-item_title")}>
+                        {doctor.name}
+                        <FontAwesomeIcon icon={faUserDoctor} className={cx('icon')} />
+                    </div>
+                    <div className={cx("center-item_date-box")}>
+                        Địa chỉ: &nbsp;
+                        <span className={cx("center-item_date")}>
+                            {doctor.address}
+                        </span>
+                    </div>
+                    <div className={cx("center-item_date-box")}>
+                        Hotline: &nbsp;
+                        <span className={cx("center-item_date")}>
+                            {doctor.hotline}
+                        </span>
+                    </div>
                 </div>
-                <div className={cx("center-item_date-box")}>
-                    Địa chỉ: &nbsp;
-                    <span className={cx("center-item_date")}>
-                        {doctor.address}
-                    </span>
-                </div>
-                <div className={cx("center-item_date-box")}>
-                    Hotline: &nbsp;
-                    <span className={cx("center-item_date")}>
-                        {doctor.hotline}
-                    </span>
-                </div>
+            </Tippy>
+        </div>
+    ))
+    const getId = (url) => {
+        return url.split('v=')[1]
+    }
+    const renderOthers = () => link.others.map((other, index) => (
+        <div key={index} className={cx('other')}>
+            <div className={cx('header')}>
+                <div className={cx('name')}>{other.name}</div>
+                <div className={cx('content')}>{other.content}</div>
+            </div>
+            <div className={cx('list-bookmark')}>
+                {other.child.map((item, idx) => (
+                    <div key={idx} className={cx('bookmark')}>
+                        <div className={cx('name')}>{item.name}</div>
+                        <img className={cx('bg')} src={`https://i.ytimg.com/vi/${getId(item.link)}/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkNQbaNpg1go32OiQHUsGNoA6cVg`} />
+                    </div>
+                ))}
             </div>
         </div>
     ))
@@ -120,9 +118,12 @@ function Result() {
                     {renderDoctors()}
                 </div>
             </div>
-            {/* <button onClick={toggleResult} className={cx('button-toggle')}>
-                        Xem kết quả
-                    </button> */}
+            <div className={cx('others')}>
+                {makeTitle('Các trang Web/Kênh có thể giúp bạn')}
+                <div className={cx('center-box')}>
+                    {renderOthers()}
+                </div>
+            </div>
         </div>
     )
 }

@@ -2,7 +2,7 @@
     "center": [
         {
             "location": "Bệnh viên tâm thần Đà Nẵng",
-            "address": "193 Nguyễn Lương Bằng, P. Hòa Khánh Bắc, Q. Liên Chiểu, Đà Nẵng",
+            "address": "193 Nguyễn Lương Bằng, Q. Liên Chiểu, Đà Nẵng",
             "hotline": "0236.3.842.326"
         },
         {
@@ -70,6 +70,38 @@
             "hotline": "0236 3821 740",
             "info": "Bác sĩ tại Bệnh viện Đà Nẵng. Là người có kinh nghiệm lâu năm, bác sĩ du học tại Hoa Kỳ, Pháp nên trình độ chuyên môn nghiệp vụ được đánh giá rất cao.",
             "specialize": "Chuyên tiếp nhận và điều trị các bệnh như: rối loạn cảm xúc, rối loạn TIC, rối loạn lo âu,..."
+        }
+    ],
+    "others": [
+        {
+            "name": "Postcard",
+            "content": "Lắng nghe và thấu hiểu câu chuyện của người khác cũng là lúc mà bạn có thể nhìn nhận lại chính bản thân mình và đâu đó bạn sẽ nhìn thấy một phần của mình trong những câu chuyện kể. Khi ấy bạn sẽ nhận ra trên con đường chữa lành tâm hồn, bạn chưa từng cô đơn, và với những postcard dưới đây, mình hy vọng trong lúc lắng nghe bạn sẽ tìm được những tâm hồn đồng điệu và chữa lành được đứa trẻ bên trong bạn.",
+            "child": [
+                {
+                    "name": "Làm bạn thân với bản thân",
+                    "link": "https://www.youtube.com/watch?v=XVIVQi2ISjk"
+                },
+                {
+                    "name": "Have a sip - thầy Minh Niệm",
+                    "link": "https://www.youtube.com/watch?v=HBqsm_e3pqI"
+                },
+                {
+                    "name": "Cách để đối diện với tiêu cực và vượt qua khó khăn cùng Khánh Vy",
+                    "link": "https://www.youtube.com/watch?v=bdK95yNhIP0"
+                },
+                {
+                    "name": "Amateur psychology",
+                    "link": "https://www.youtube.com/watch?v=bdK95yNhIP0"
+                },
+                {
+                    "name": "Tâm lý học tuổi trẻ",
+                    "link": "https://open.spotify.com/playlist/4hwLDp9sH08r6Q8GRYLXYa?si=8714cfe2201d408c"
+                },
+                {
+                    "name": "Tri kỉ cảm xúc",
+                    "link": "https://open.spotify.com/show/3vhBp6pPJEYgGfOXGU8ogu?si=756e0d1fd1b840db"
+                }
+            ]
         }
     ]
 }

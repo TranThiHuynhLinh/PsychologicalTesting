@@ -1,15 +1,19 @@
 import classNames from "classnames/bind"
 import styles from "./Measure.module.scss"
-import * as question from "~/api/question"
+import * as questionApi from "~/api/question"
+import question from "~/database/question"
 import { useState } from "react"
 import { toast } from "react-toastify"
 import { useNavigate } from "react-router-dom"
 import routesConfig from "~/config/routes"
+import { Link } from "react-router-dom"
 const cx = classNames.bind(styles)
 
 function Measure() {
     const navigate = useNavigate()
-    const questions = question.getAllQuestion()
+    const questions = questionApi.getAllQuestion()
+    const [showModal, setShowModal] = useState(false)
+    const [modalContent, setModalContent] = useState('')
     const [scores, setScores] = useState(Array(questions.length).fill(null))
 
     const handleScoreChange = (index, score) => {
@@ -20,13 +24,27 @@ function Measure() {
 
     const calculateTotalScore = () => {
         const isAllAnswered = scores.every(score => score !== null)
-
         if (!isAllAnswered) {
             toast.error("Vui lòng trả lời tất cả các câu hỏi trước khi hoàn thành.")
         } else {
             const totalScore = scores.reduce((acc, current) => acc + current, 0)
-            localStorage.setItem("totalScore", totalScore)
-            navigate(routesConfig.result)
+            const result = question['result']
+            const scoring = (totalScore) => {
+                if (totalScore < 5) {
+                    return result[0]['content']
+                } else if (totalScore < 10) {
+                    return result[1]['content']
+                } else if (totalScore < 15) {
+                    return result[2]['content']
+                } else if (totalScore < 20) {
+                    return result[3]['content']
+                } else {
+                    return result[4]['content']
+                }
+            }
+            const content = scoring(totalScore)
+            setModalContent(content)
+            setShowModal(true)
         }
     }
 
@@ -69,8 +87,22 @@ function Measure() {
                     })}
                 </div>
             </div>
-            <button className={cx('button')} onClick={calculateTotalScore}>Hoàn thành</button>
-        </div>
+            <button className={cx('button')} onClick={calculateTotalScore}>Xem kết quả</button>
+            {showModal && (
+                <div className={cx('modal')}>
+                    <div className={cx('modal-content')}>
+                        <button className={cx('modal-button')} onClick={() => setShowModal(false)}>X</button>
+                        <div className={cx('content')}>
+                            {modalContent}
+                        </div>
+                        <Link className={cx('link')} to={routesConfig.result}>
+                            Chuyển đến Trung tâm hỗ trợ
+                        </Link>
+                    </div>
+                </div>
+            )
+            }
+        </div >
     )
 }
 
