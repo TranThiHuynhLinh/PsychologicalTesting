@@ -90,18 +90,57 @@ function Result() {
     }
     const renderOthers = () => link.others.map((other, index) => (
         <div key={index} className={cx('other')}>
-            <div className={cx('header')}>
-                <div className={cx('name')}>{other.name}</div>
-                <div className={cx('content')}>{other.content}</div>
-            </div>
-            <div className={cx('list-bookmark')}>
-                {other.child.map((item, idx) => (
-                    <div key={idx} className={cx('bookmark')}>
-                        <div className={cx('name')}>{item.name}</div>
-                        <img className={cx('bg')} src={`https://i.ytimg.com/vi/${getId(item.link)}/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkNQbaNpg1go32OiQHUsGNoA6cVg`} />
+            {index % 2 === 0 ? (
+                <>
+                    <div className={cx('header')}>
+                        <div className={cx('name')}>{other.name}</div>
+                        <div className={cx('content')}>{other.content}</div>
                     </div>
-                ))}
-            </div>
+                    <div className={cx('list-bookmark')}>
+                        {other.child.map((item, idx) => (
+                            <a href={item.link} key={idx} className={cx('bookmark')} target="_blank" rel="noopener noreferrer">
+                                <img className={cx('bg')} src={`https://i.ytimg.com/vi/${getId(item.link)}/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkNQbaNpg1go32OiQHUsGNoA6cVg`} />
+                                <div className={cx('name')}>{item.name}</div>
+                            </a>
+                        ))}
+                    </div>
+                </>
+            ) : (
+                <>
+                    <div className={cx('list-bookmark')}>
+                        {other.child.map((item, idx) => (
+                            <a href={item.link} key={idx} className={cx('bookmark')} target="_blank" rel="noopener noreferrer">
+                                <img className={cx('bg')} src={`https://i.ytimg.com/vi/${getId(item.link)}/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkNQbaNpg1go32OiQHUsGNoA6cVg`} />
+                                <div className={cx('name')}>{item.name}</div>
+                            </a>
+                        ))}
+                    </div>
+                    <div className={cx('header')}>
+                        <div className={cx('name')}>{other.name}</div>
+                        <div className={cx('content')}>{other.content}</div>
+                    </div>
+                </>
+            )}
+        </div>
+    ))
+    const renderBooks = () => link.books.map((book, index) => (
+        <div key={index} >
+            <Tippy
+                content={
+                    <div className={cx('tippy-modal')}>
+                        <div className={cx('content')}>{book.content}</div>
+                    </div>
+                }
+                placement="right"
+                trigger="mouseenter"
+                hideOnClick={false}
+                animation="fade"
+            >
+                <div className={cx('bookmark')}>
+                    <img className={cx('bg')} src={book.img} />
+                    <div className={cx('name')}>{book.name}</div>
+                </div>
+            </Tippy>
         </div>
     ))
     return (
@@ -122,6 +161,12 @@ function Result() {
                 {makeTitle('Các trang Web/Kênh có thể giúp bạn')}
                 <div className={cx('center-box')}>
                     {renderOthers()}
+                </div>
+            </div>
+            <div className={cx('books')}>
+                <div className={cx('header')}>Sách</div>
+                <div className={cx('center-box')}>
+                    {renderBooks()}
                 </div>
             </div>
         </div>

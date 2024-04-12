@@ -1,12 +1,8 @@
 .wrapper {
     height: 100%;
     width: 100%;
-    background-color: var(--blue);
-    background-image: linear-gradient(
-        19deg,
-        var(--blue) 0%,
-        var(--primary-2) 100%
-    );
+    background-color: #0093e9;
+    background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
     padding: 20px 12px;
     overflow-x: hidden;
 
@@ -16,6 +12,7 @@
         justify-content: center;
         font-weight: 700;
         font-size: 3rem;
+        overflow-x: hidden;
     }
 }
 
@@ -63,55 +60,8 @@
     }
 }
 
-.button-toggle {
-    margin-top: 20px;
-    position: relative;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 12px 32px;
-    text-align: center;
-    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-    background-size: 300%;
-    border-radius: 30px;
-    text-transform: uppercase;
-    cursor: pointer;
-    z-index: 1;
-    transition: scale 0.3s ease-in-out;
-
-    &:hover {
-        animation: animated 8s linear infinite;
-        scale: 1.2;
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        inset: -5px;
-        z-index: -1;
-        background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-        background-size: 400%;
-        border-radius: 35px;
-        transition: 0.5s;
-    }
-
-    &:hover::before {
-        filter: blur(20px);
-    }
-}
-
-@keyframes animated {
-    0% {
-        background-position: 0%;
-    }
-
-    100% {
-        background-position: 400%;
-    }
-}
-
 .center-box {
+    overflow-x: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -232,40 +182,140 @@
 }
 
 .other {
+    overflow-x: hidden;
     padding: 0 24px;
+    margin-bottom: 52px;
+    display: flex;
+    flex-direction: row;
     .header {
+        overflow-x: hidden;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 24px;
+        .name {
+            text-align: left;
+            font-size: 4.8rem;
+            font-weight: 600;
+            color: var(--white);
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+        .content {
+            color: var(--white);
+            line-height: 2;
+            font-size: 1.8rem;
+            font-weight: 500;
+        }
     }
     .list-bookmark {
+        width: 60%;
         display: flex;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        align-items: center;
+        overflow-x: hidden;
 
         .bookmark {
-            -ms-flex-preferred-size: calc(33.33333% - 30px);
-            flex-basis: calc(33.33333% - 30px);
-            border: 1px solid #e2e2e2;
+            text-decoration: none;
+            overflow-x: hidden;
+            color: black;
+            width: 240px;
+            border-radius: 12px;
             display: flex;
-            margin-right: 30px;
-            margin-bottom: 12px;
+            margin-right: 48px;
+            margin-bottom: 24px;
+            min-height: 308px;
+            max-height: 320px;
             cursor: pointer;
+            flex-direction: column;
+            background-color: #8ec5fc;
+            background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
 
-            &:hover {
-                background-color: #e2e2e2;
+            overflow: hidden;
+
+            &:hover > .bg {
+                scale: 1.1;
+            }
+
+            &:hover > .name {
+                color: var(--white);
+                scale: 1.05;
             }
 
             .name {
-                width: 40%;
+                width: 100%;
+                padding: 12px;
+                font-size: 1.6rem;
+                font-weight: 800;
+                text-transform: uppercase;
+                text-align: center;
+                transition: all 0.24s ease-in-out;
+                margin-top: 8px;
             }
 
             .bg {
-                width: 60%;
+                width: 100%;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+                transition: all 0.4s ease-in-out;
             }
+        }
+    }
+}
+
+.books {
+    overflow-x: hidden;
+    .header {
+        text-align: center;
+        font-size: 4.8rem;
+        font-weight: 600;
+        color: var(--white);
+        text-transform: uppercase;
+    }
+    .center-box {
+        padding-left: 100px;
+    }
+    .bookmark {
+        color: black;
+        width: 280px;
+        border-radius: 12px;
+        display: flex;
+        margin-right: 60px;
+        margin-top: 24px;
+        min-height: 420px;
+        cursor: pointer;
+        flex-direction: column;
+        background-color: #8ec5fc;
+        background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
+        overflow: hidden;
+
+        &:hover > .bg {
+            scale: 1.1;
+        }
+
+        &:hover > .name {
+            color: var(--white);
+            scale: 1.05;
+        }
+
+        .name {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+            transition: all 0.24s ease-in-out;
+            margin-top: 8px;
+        }
+
+        .bg {
+            width: 100%;
+            height: 320px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            transition: all 0.4s ease-in-out;
         }
     }
 }

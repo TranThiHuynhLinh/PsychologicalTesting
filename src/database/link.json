@@ -90,18 +90,170 @@
                     "link": "https://www.youtube.com/watch?v=bdK95yNhIP0"
                 },
                 {
-                    "name": "Amateur psychology",
-                    "link": "https://www.youtube.com/watch?v=bdK95yNhIP0"
+                    "name": "Bền bỉ vượt lên mọi nỗi sợ",
+                    "link": "https://www.youtube.com/watch?v=Mw-CxZTFcLg"
                 },
                 {
-                    "name": "Tâm lý học tuổi trẻ",
-                    "link": "https://open.spotify.com/playlist/4hwLDp9sH08r6Q8GRYLXYa?si=8714cfe2201d408c"
+                    "name": "Nỗi sợ có gì tích cực?",
+                    "link": "https://www.youtube.com/watch?v=9tHDvmUXaGQ"
                 },
                 {
-                    "name": "Tri kỉ cảm xúc",
-                    "link": "https://open.spotify.com/show/3vhBp6pPJEYgGfOXGU8ogu?si=756e0d1fd1b840db"
+                    "name": "Khi chữa lành là bước tiếp theo của ranh giới",
+                    "link": "https://www.youtube.com/watch?v=5EQLNUQq03M"
                 }
             ]
+        },
+        {
+            "name": "Luyện tập/vận động",
+            "content": "Những bài tập Yoga tập trung vào từng hơi thở, từng động tác cùng với những âm thanh mang lại cảm giác thư giãn là một giải pháp tuyệt vời để chữa lành tâm hồn. Tập Yoga cũng là cách để yêu thương bản thân mình, việc tập Yoga thường xuyên sẽ tăng cường sản xuất hóc môn Serotonin có tác dụng thúc đẩy cảm giác thư giãn, bình tĩnh, tập trung và hạnh phúc. Thiền có thể không làm biến mất hoàn toàn các triệu chứng trầm cảm nhưng sẽ giúp bạn kiểm soát chúng để giảm bớt cơn đau, giúp tĩnh tâm và không đáp lại những suy nghĩ tiêu cực. Với những video dưới đây hy vọng phần nào xoa dịu đi nỗi đau trong bạn.",
+            "child": [
+                {
+                    "name": "Yoga",
+                    "link": "https://www.youtube.com/watch?v=Sxddnugwu-8"
+                },
+                {
+                    "name": "Yoga for mental health (Yoga with Adriene)",
+                    "link": "https://www.youtube.com/watch?v=x0nZ1ZLephQ"
+                },
+                {
+                    "name": "Thiền - Daily Yoga with Jess",
+                    "link": "https://www.youtube.com/watch?v=a6siZaGGmLw"
+                },
+                {
+                    "name": "30 MIN YOGA FLOW FOR DEPRESSION",
+                    "link": "https://www.youtube.com/watch?v=ax0PDbgeDhY"
+                },
+                {
+                    "name": "Restorative Yoga For Stress Relief",
+                    "link": "https://www.youtube.com/watch?v=40bPxbFUCj4"
+                }
+            ]
+        },
+        {
+            "name": "Ẩm thực",
+            "content": "Khung cảnh làng quê tràn ngập hoa và nắng hòa cùng âm thanh của núi rừng, tiếng chim hót líu lo sẽ đưa bạn đến những vùng đất bình yên như quê nhà. Những món ăn đơn giản được nấu dưới căn bếp hồng tỏa khói sẽ mang lại cảm giác thoải mái, ấm cúng. Hay trong góc bếp nhỏ xinh, được làm món mình thích có lẽ sẽ mang lại niềm vui và sự hứng khởi. Hy vọng với những video này sẽ mang lại cảm giác thư giãn cho bạn, biết đâu bạn sẽ khơi dậy được cảm hứng nấu ăn bên trong mình để có thêm một đam mê mà thêm yêu cuộc sống.",
+            "child": [
+                {
+                    "name": "Mong từng xiên hồng đổ sẽ mang đến một năm mới thuận lợi cho mọi người",
+                    "link": "https://www.youtube.com/watch?v=YKIXHn3kDL0"
+                },
+                {
+                    "name": "Dragon boat zongzi~龙舟枕头粽",
+                    "link": "https://www.youtube.com/watch?v=vusE2HqaAEY"
+                },
+                {
+                    "name": "Dùng gia vị mọc dại của Vân Nam, nấu một mâm cơm nhà thơm ngon",
+                    "link": "https://www.youtube.com/watch?v=T8NhhueDHo4"
+                },
+                {
+                    "name": "Lại một mùa Đoan Ngọ, các bạn thích ăn bánh ú vị gì?",
+                    "link": "https://www.youtube.com/watch?v=vOW4uH5KD0U"
+                },
+                {
+                    "name": "Bữa sáng đồng quê với những nguyên liệu đơn giản",
+                    "link": "https://www.youtube.com/watch?v=VF5XqT_F_BQ"
+                }
+            ]
+        },
+        {
+            "name": "Cải thiện giấc ngủ",
+            "content": "Âm nhạc cũng là một giải pháp tốt để cải thiện giấc ngủ. Giai điệu nhẹ nhàng, âm thanh du dương kết hợp cùng với những âm thanh của thiên nhiên sẽ khiến bạn thư giãn dễ đi vào giấc ngủ hơn. Bên cạnh đó, nếu bạn kết hợp cùng với những bài tập hít thở trước khi ngủ sẽ mang lại hiệu quả cao hơn. Với những video dưới đây hy vọng bạn sẽ dễ dàng chìm vào giấc ngủ ngon để quên đi mọi căng thẳng, bộn bề.",
+            "child": [
+                {
+                    "name": "Âm nhạc",
+                    "link": "https://www.youtube.com/watch?v=F0B0znyoi8g"
+                },
+                {
+                    "name": "Take a deep breath",
+                    "link": "https://www.youtube.com/watch?v=j-1n3KJR1I8"
+                },
+                {
+                    "name": "Âm nhạc",
+                    "link": "https://www.youtube.com/watch?v=FjHGZj2IjBk"
+                }
+            ]
+        },
+        {
+            "name": "Anime",
+            "content": "Với những thước phim sống động được dựng trên khung cảnh bếp núc phần nào giúp bạn cảm thấy thoải mái, phần nào sẽ khiến bạn liên tưởng đến những bộ phim hoạt hình đã xem ngày nhỏ. Với những video sống động này hy vọng có thể đưa bạn trở về miền ký ức tuổi thơ, an ủi đứa trẻ bên trong bạn.",
+            "child": [
+                {
+                    "name": "Cooking green girl",
+                    "link": "https://www.youtube.com/watch?v=6wgHLztsypw"
+                },
+                {
+                    "name": "Asthetic anime food",
+                    "link": "https://www.youtube.com/watch?v=gsE9tPtydxI"
+                }
+            ]
+        },
+        {
+            "name": "Cartoon",
+            "content": "Với những bộ phim hoạt hình được đề xuất bên dưới, chúng mình hy vọng bạn sẽ có được những giây phút thư giãn thật tuyệt vời, và thông qua những thước phim vui nhộn này việc học ngoại ngữ của chúng mình cũng sẽ cũng không còn quá áp lực nữa đâu í!",
+            "child": [
+                {
+                    "name": "Hello Jado",
+                    "link": "https://www.youtube.com/watch?v=_Al7FV_abZg"
+                },
+                {
+                    "name": "Nhất Thiền tiểu hòa thượng",
+                    "link": "https://www.youtube.com/watch?v=1itmKC8KIf0"
+                },
+                {
+                    "name": "Masha and the Bear",
+                    "link": "https://www.youtube.com/watch?v=BhKjLRiuk1Q"
+                },
+                {
+                    "name": "Disney princess",
+                    "link": "https://www.youtube.com/watch?v=HNNuZ2B-P4c"
+                },
+                {
+                    "name": "Petit ours brun",
+                    "link": "https://www.youtube.com/watch?v=EVFGpZ2qNkA"
+                }
+            ]
+        }
+    ],
+    "books": [
+        {
+            "name": "Chữa lành đứa trẻ bên trong bạn",
+            "content": "Cuốn sách “Chữa lành đứa trẻ bên trong bạn” được lần đầu xuất bản vào tháng 1 năm 1987, cách đây nhiều thập kỷ nhưng vẫn mang đến nhiều giá trị cho độc giả, những người trưởng thành đã biết hay lần đầu biết đến khái niệm “đứa trẻ nội tâm”. “Chữa lành đứa trẻ bên trong bạn” mô tả những nguyên nhân khiến bạn bị tổn thương khi còn nhỏ và bằng cách vượt qua và chữa lành những tổn thương đó, cuộc sống trưởng thành của bạn sẽ bình an, hạnh phúc, không còn những nỗi lo lắng hay sợ hãi.",
+            "img": "/img/0.jpg"
+        },
+        {
+            "name": "Chúng ta rồi cũng sẽ hạnh phúc theo những cách khác nhau",
+            "content": "Tác giả Thảo Thảo gửi đến bạn những những điều bé nhỏ bình dị trong cuốn sách Chúng ta rồi sẽ hạnh phúc theo những cách khác nhau. Những câu chuyện cuộc đời, những câu chuyện tình yêu, những lần vấp ngã, những lần mạnh mẽ đứng lên đều sẽ là nguồn động lực cổ vũ bạn dù ngoài kia có khó khăn thế nào hãy luôn yêu lấy bản thân mình. Vì khi yêu lấy chính mình cũng là lúc bạn biết yêu lấy cuộc đời này.",
+            "img": "/img/1.jpg"
+        },
+        {
+            "name": "Nhẹ tênh giữa chênh vênh",
+            "content": "Tuổi trẻ của chúng ta là những tháng ngày vừa náo nhiệt, vừa vui vẻ trải nghiệm đủ thứ trên đời. Thế nhưng có đôi khi chính chúng ta hoang mang không biết nên làm thế nào để đi qua những khó khăn, mệt mỏi. Cuốn sách “Nhẹ tênh giữa những chênh vênh tuổi trẻ” sẽ giúp bạn đọc có cái nhìn khác về tuổi trẻ, những nỗi buồn và mệt mỏi của bạn sẽ nhẹ nhàng nếu bạn luôn nhìn mọi chuyện theo hướng tích cực và lạc quan.",
+            "img": "/img/2.jpg"
+        },
+        {
+            "name": "Chúng ta sinh ra là để hạnh phúc",
+            "content": "Thực ra, mỗi chúng ta đều có một cách hiểu khác nhau về hạnh phúc và ở từng thời điểm, khái niệm hạnh phúc cũng sẽ thay đổi theo. Duy chỉ có một điều không thay đổi: Hạnh phúc của bạn do bạn định nghĩa chứ không phải người khác. Hạnh phúc của bạn nằm trong trái tim của bạn, không phải nằm trong đôi mắt người khác. Cuốn sách này mang đến những thông điệp tích cực như tên của nó 'Chúng ta sinh ra là để hạnh phúc'. Từng bức thư cũng chính là những lời an ủi, động viên mà tác giả muốn nhắn gửi đến bạn - một người trẻ đang trên hành trình chữa lành bản thân và hoàn thiện chính mình.",
+            "img": "/img/3.jpg"
+        },
+        {
+            "name": "Nâng lên được, đặt xuống được",
+            "content": "Cuốn sách Nâng lên được, đặt xuống được của Trương Di là cuốn sách dành riêng cho những tâm hồn hướng nội, những con người có trái tim yếu đuối. Cuốn sách mang chất chứa những nỗi niềm sâu thẳm trong tâm khảm của bao độc giả hướng nội. Những người hướng nội thực ra rất yếu đuối và dễ tổn thương. Nhưng những đau khổ rồi sẽ qua đi tự họ phải biết thương lấy mình để sống hạnh phúc hơn.",
+            "img": "/img/4.jpg"
+        },
+        {
+            "name": "Đừng để trầm cảm tấn công bạn",
+            "content": "Cảm giác căng thẳng âu lo, mặc cảm tội lỗi, thái độ bi quan, sự tự ti và những “hố đen” khác của chứng trầm cảm đều có thể được chữa trị mà không cần đến thuốc men.Tính đến hiện tại, tác phẩm Đừng Để Trầm Cảm Tấn Công Bạn đã có hơn 3 triệu bản bán ra trên toàn thế giới. Trong một khảo sát trên toàn nước Mỹ mới đây, tác phẩm Đừng Để Trầm Cảm Tấn Công Bạn được bình chọn là quyển sách chữa trị ưu phiền hữu hiệu nhất – được chọn ra từ hơn 1.000 quyển sách phát triển bản thân – thường được các chuyên gia trị liệu tâm thần tại Mỹ giới thiệu cho bệnh nhân mắc chứng trầm cảm tìm đọc. Quyển Đừng Để Trầm Cảm Tấn Công Bạn của bác sĩ Burns xếp thứ hai trong khảo sát nói trên.",
+            "img": "/img/5.jpg"
+        },
+        {
+            "name": "Phương pháp điều trị trầm cảm",
+            "content": "Nếu đang gặp rắc rối với trầm cảm hoặc có mong muốn giúp đỡ những người thân phòng ngừa/điều trị trầm cảm mà không phải lệ thuộc vào thuốc, bạn nên tham khảo cuốn sách này. Cuốn sách là công trình nghiên cứu của Tiến sĩ Stephen S. Ilardi về TLC (Therapeutic Lifestyle Change – Phương pháp trị liệu thay đổi lối sống).",
+            "img": "/img/6.jpg"
+        },
+        {
+            "name": "Những điều giữ tôi còn sống",
+            "content": "Những Điều Giữ Tôi Còn Sống - một cuốn sách viết về trải nghiệm của tác giả Matt Haig trong quá trình chống lại bệnh trầm cảm và rối loạn lo âu. Được xuất bản lần đầu tiên vào năm 2015 và đã trở thành một cuốn sách bán chạy ở Anh và trên toàn thế giới. Trong cuốn sách Matt Haig đã chia sẻ về những cảm xúc, suy nghĩ và trải nghiệm của mình trong suốt thời gian mắc bệnh trầm cảm và rối loạn lo âu. Anh cũng đưa ra những lời khuyên và phương pháp giúp anh vượt qua những khó khăn đó. Những điều này được trình bày dưới dạng các chương ngắn, tinh tế và rất chân thật.",
+            "img": "/img/7.jpg"
         }
     ]
 }
